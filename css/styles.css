@@ -210,6 +210,8 @@ p {
   cursor: pointer;
   border-radius: 4px;
   border: 1px solid transparent;
+  padding: 0;
+  margin: 0;
 }
 
 /*hero button*/
@@ -464,7 +466,6 @@ p {
 }
 
 .works-list > .works-categories {
-  background-color: var(--bg-color-white);
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
@@ -481,13 +482,36 @@ p {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.works-categories .bottom-description {
+.works-categories .thumb-description {
+  position: relative;
+}
+
+.thumb-description .text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: var(--text-color-white);
+  font-size: 18px;
+  line-height: 1.55;
+  opacity: 0;
+}
+
+.works-categories:hover .link .thumb-description .text,
+.works-categories .link:focus .thumb-description .text {
+  opacity: 1;
+}
+
+.works-categories .thumb {
   border: solid 1px var(--card-border-color);
   border-top: 0;
   padding: 20px 24px;
 }
 
-.works-categories .title {
+.thumb .title {
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
@@ -496,7 +520,7 @@ p {
   margin: 0 0 4px;
 }
 
-.works-categories .text {
+.thumb .text {
   font-size: 16px;
   line-height: 1.87;
   color: var(--primary-text-color);
@@ -561,4 +585,43 @@ p {
 .our-social-networks .link {
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--text-color-white);
+}
+
+/* beckdrop */
+.beckdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.beckdrop .modal {
+  position: absolute;
+  min-width: 528px;
+  min-height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-color-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal .button {
+  position: absolute;
+  display: flex;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.modal .icon {
+  fill: var(--text-color-blac);
+  margin: auto;
 }
