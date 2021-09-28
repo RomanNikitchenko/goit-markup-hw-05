@@ -120,7 +120,7 @@ p {
 }
 
 /* not in those assignments */
-.site-nav .current-hover,
+/* .site-nav .current-hover,
 .contact-nav .current-hover {
   position: relative;
 }
@@ -145,7 +145,7 @@ p {
 .site-nav .current-hover:focus::after,
 .contact-nav .current-hover:focus::after {
   transform: scale(1);
-}
+} */
 /* not in those assignments */
 
 .conteiner .contact-nav {
@@ -670,7 +670,7 @@ p {
 }
 
 .beckdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal .button {
